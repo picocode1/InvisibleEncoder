@@ -128,8 +128,9 @@ local function StringToBytes(str)
 end
 
 local function BytesToString(str)
-    local function gsub(c)return string.char(c - 12) end
-    return str:gsub("(%d+)'?", gsub) 
+    return str:gsub("(%d+)'?", function(c)
+        return string.char(c - 12)
+    end) 
 end
 
 local function StringSplit(String)
