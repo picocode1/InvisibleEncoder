@@ -5,7 +5,7 @@ local table = table
 local unpack = unpack
 local print = print
 
---// bit
+--// Libraries
 local bit = {}
 
 local MOD = 2^32
