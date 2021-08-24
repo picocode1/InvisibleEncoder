@@ -198,24 +198,24 @@ end
 
 function Library.encode(String)
     String = String
-    local enc_tbl = {} 
+    local EncodedTable = {} 
 
     for i, v in ipairs(StringSplit(String)) do
-       enc_tbl[i] = utf8_char(CHARACTERS_Table[v])
+       EncodedTable[i] = utf8_char(CHARACTERS_Table[v])
     end
-    return table.concat(enc_tbl, "")
+    return table.concat(EncodedTable, "")
 end
 
 
 function Library.decode(String)
-    local dec_tbl = {}
+    local DecodedTable = {}
     local Bytes = SplitBytes(StringToBytes(String))
 
     for i,v in pairs(Bytes) do
-      dec_tbl[i] = REVERSE_Table[v]
+      DecodedTable[i] = REVERSE_Table[v]
     end
     
-    return table.concat(dec_tbl, "")
+    return table.concat(DecodedTable, "")
 end
 
 function Library.pog64(String)
