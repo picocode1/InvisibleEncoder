@@ -175,8 +175,7 @@ local function SplitBytes(inputstr)
           Assembled = str
           index = index + 1
        end
-
-       print(str)
+       --print(str)
   	end
 
   	return Table
