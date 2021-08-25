@@ -4,7 +4,7 @@ An encoder that makes strings invisible, replaces ASCII characters with zero-wid
 
 
 ```lua
-local Invisible = require('Library')
+local Invisible = require('EncoderLibrary')
 
 local string = 'Hello World!'
 local encoded_string = Invisible.encode(string)
